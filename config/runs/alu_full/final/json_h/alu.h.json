@@ -1,0 +1,1310 @@
+{
+  "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+  "modules": {
+    "alu": {
+      "attributes": {
+        "hdlname": "alu",
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "/home/krishna/ALU_8bit/rtl/alu.v:3.1-72.10"
+      },
+      "parameter_default_values": {
+        "WIDTH": "00000000000000000000000000001000"
+      },
+      "ports": {
+        "a": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "op": {
+          "direction": "input",
+          "bits": [ 18, 19, 20 ]
+        },
+        "result": {
+          "direction": "output",
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28 ]
+        },
+        "zero": {
+          "direction": "output",
+          "bits": [ 29 ]
+        },
+        "carry": {
+          "direction": "output",
+          "bits": [ 30 ]
+        },
+        "overflow": {
+          "direction": "output",
+          "bits": [ 31 ]
+        },
+        "negative": {
+          "direction": "output",
+          "bits": [ 28 ]
+        }
+      },
+      "cells": {
+        "$add$/home/krishna/ALU_8bit/rtl/alu.v:25$2": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001001",
+            "Y_WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:25.31-25.52"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9, "0" ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17, "0" ],
+            "Y": [ 32, 33, 34, 35, 36, 37, 38, 39, 40 ]
+          }
+        },
+        "$and$/home/krishna/ALU_8bit/rtl/alu.v:39$10": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:39.38-39.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "Y": [ 41, 42, 43, 44, 45, 46, 47, 48 ]
+          }
+        },
+        "$eq$/home/krishna/ALU_8bit/rtl/alu.v:27$3": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:27.32-27.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 17 ],
+            "Y": [ 49 ]
+          }
+        },
+        "$eq$/home/krishna/ALU_8bit/rtl/alu.v:69$15": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:69.24-69.47"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 21, 22, 23, 24, 25, 26, 27, 28 ],
+            "Y": [ 29 ]
+          }
+        },
+        "$logic_and$/home/krishna/ALU_8bit/rtl/alu.v:27$5": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:27.31-28.67"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 49 ],
+            "B": [ 50 ],
+            "Y": [ 51 ]
+          }
+        },
+        "$logic_and$/home/krishna/ALU_8bit/rtl/alu.v:34$9": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:34.31-35.67"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 52 ],
+            "B": [ 53 ],
+            "Y": [ 54 ]
+          }
+        },
+        "$ne$/home/krishna/ALU_8bit/rtl/alu.v:28$4": {
+          "hide_name": 1,
+          "type": "$ne",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:28.32-28.66"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 39 ],
+            "B": [ 9 ],
+            "Y": [ 50 ]
+          }
+        },
+        "$ne$/home/krishna/ALU_8bit/rtl/alu.v:34$7": {
+          "hide_name": 1,
+          "type": "$ne",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:34.32-34.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 17 ],
+            "Y": [ 52 ]
+          }
+        },
+        "$ne$/home/krishna/ALU_8bit/rtl/alu.v:35$8": {
+          "hide_name": 1,
+          "type": "$ne",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:35.32-35.66"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 55 ],
+            "B": [ 9 ],
+            "Y": [ 53 ]
+          }
+        },
+        "$not$/home/krishna/ALU_8bit/rtl/alu.v:51$13": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:51.38-51.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "Y": [ 56, 57, 58, 59, 60, 61, 62, 63 ]
+          }
+        },
+        "$or$/home/krishna/ALU_8bit/rtl/alu.v:43$11": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:43.38-43.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "Y": [ 64, 65, 66, 67, 68, 69, 70, 71 ]
+          }
+        },
+        "$procmux$16": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "0", "0", "0", "0", "0", "0", 54, 51 ],
+            "S": [ 72, 73, 74, 75, 76, 77, 78, 79 ],
+            "Y": [ 31 ]
+          }
+        },
+        "$procmux$17_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 72 ]
+          }
+        },
+        "$procmux$18_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 73 ]
+          }
+        },
+        "$procmux$19_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 74 ]
+          }
+        },
+        "$procmux$20_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 75 ]
+          }
+        },
+        "$procmux$21_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 76 ]
+          }
+        },
+        "$procmux$22_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 77 ]
+          }
+        },
+        "$procmux$23_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 78 ]
+          }
+        },
+        "$procmux$24_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "Y": [ 79 ]
+          }
+        },
+        "$procmux$25": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 2, 9, "0", "0", "0", "0", 80, 40 ],
+            "S": [ 81, 82, 83, 84, 85, 86, 87, 88 ],
+            "Y": [ 30 ]
+          }
+        },
+        "$procmux$26_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 81 ]
+          }
+        },
+        "$procmux$27_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 82 ]
+          }
+        },
+        "$procmux$28_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 83 ]
+          }
+        },
+        "$procmux$29_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 84 ]
+          }
+        },
+        "$procmux$30_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 85 ]
+          }
+        },
+        "$procmux$31_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 86 ]
+          }
+        },
+        "$procmux$32_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 87 ]
+          }
+        },
+        "$procmux$33_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "Y": [ 88 ]
+          }
+        },
+        "$procmux$34": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 3, 4, 5, 6, 7, 8, 9, "0", "0", "0", 2, 3, 4, 5, 6, 7, 8, 9, 56, 57, 58, 59, 60, 61, 62, 63, "0", 89, 90, 91, 92, 93, 94, 95, 96, "0", 64, 65, 66, 67, 68, 69, 70, 71, "0", 41, 42, 43, 44, 45, 46, 47, 48, "0", 97, 98, 99, 100, 101, 102, 103, 55, 80, 32, 33, 34, 35, 36, 37, 38, 39, 40 ],
+            "S": [ 104, 105, 106, 107, 108, 109, 110, 111 ],
+            "Y": [ 21, 22, 23, 24, 25, 26, 27, 28, 112 ]
+          }
+        },
+        "$procmux$35_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 104 ]
+          }
+        },
+        "$procmux$36_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 105 ]
+          }
+        },
+        "$procmux$37_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 106 ]
+          }
+        },
+        "$procmux$38_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 107 ]
+          }
+        },
+        "$procmux$39_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 108 ]
+          }
+        },
+        "$procmux$40_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 109 ]
+          }
+        },
+        "$procmux$41_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 110 ]
+          }
+        },
+        "$procmux$42_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:0.0-0.0|/home/krishna/ALU_8bit/rtl/alu.v:22.9-64.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18, 19, 20 ],
+            "Y": [ 111 ]
+          }
+        },
+        "$sub$/home/krishna/ALU_8bit/rtl/alu.v:32$6": {
+          "hide_name": 1,
+          "type": "$sub",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001001",
+            "Y_WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:32.31-32.52"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9, "0" ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17, "0" ],
+            "Y": [ 97, 98, 99, 100, 101, 102, 103, 55, 80 ]
+          }
+        },
+        "$xor$/home/krishna/ALU_8bit/rtl/alu.v:47$12": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:47.38-47.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "Y": [ 89, 90, 91, 92, 93, 94, 95, 96 ]
+          }
+        }
+      },
+      "netnames": {
+        "$add$/home/krishna/ALU_8bit/rtl/alu.v:25$2_Y": {
+          "hide_name": 1,
+          "bits": [ 32, 33, 34, 35, 36, 37, 38, 39, 40 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:25.31-25.52"
+          }
+        },
+        "$and$/home/krishna/ALU_8bit/rtl/alu.v:39$10_Y": {
+          "hide_name": 1,
+          "bits": [ 41, 42, 43, 44, 45, 46, 47, 48 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:39.38-39.43"
+          }
+        },
+        "$eq$/home/krishna/ALU_8bit/rtl/alu.v:27$3_Y": {
+          "hide_name": 1,
+          "bits": [ 49 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:27.32-27.56"
+          }
+        },
+        "$logic_and$/home/krishna/ALU_8bit/rtl/alu.v:27$5_Y": {
+          "hide_name": 1,
+          "bits": [ 51 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:27.31-28.67"
+          }
+        },
+        "$logic_and$/home/krishna/ALU_8bit/rtl/alu.v:34$9_Y": {
+          "hide_name": 1,
+          "bits": [ 54 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:34.31-35.67"
+          }
+        },
+        "$ne$/home/krishna/ALU_8bit/rtl/alu.v:28$4_Y": {
+          "hide_name": 1,
+          "bits": [ 50 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:28.32-28.66"
+          }
+        },
+        "$ne$/home/krishna/ALU_8bit/rtl/alu.v:34$7_Y": {
+          "hide_name": 1,
+          "bits": [ 52 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:34.32-34.56"
+          }
+        },
+        "$ne$/home/krishna/ALU_8bit/rtl/alu.v:35$8_Y": {
+          "hide_name": 1,
+          "bits": [ 53 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:35.32-35.66"
+          }
+        },
+        "$not$/home/krishna/ALU_8bit/rtl/alu.v:51$13_Y": {
+          "hide_name": 1,
+          "bits": [ 56, 57, 58, 59, 60, 61, 62, 63 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:51.38-51.40"
+          }
+        },
+        "$or$/home/krishna/ALU_8bit/rtl/alu.v:43$11_Y": {
+          "hide_name": 1,
+          "bits": [ 64, 65, 66, 67, 68, 69, 70, 71 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:43.38-43.43"
+          }
+        },
+        "$procmux$17_CMP": {
+          "hide_name": 1,
+          "bits": [ 72 ],
+          "attributes": {
+          }
+        },
+        "$procmux$18_CMP": {
+          "hide_name": 1,
+          "bits": [ 73 ],
+          "attributes": {
+          }
+        },
+        "$procmux$19_CMP": {
+          "hide_name": 1,
+          "bits": [ 74 ],
+          "attributes": {
+          }
+        },
+        "$procmux$20_CMP": {
+          "hide_name": 1,
+          "bits": [ 75 ],
+          "attributes": {
+          }
+        },
+        "$procmux$21_CMP": {
+          "hide_name": 1,
+          "bits": [ 76 ],
+          "attributes": {
+          }
+        },
+        "$procmux$22_CMP": {
+          "hide_name": 1,
+          "bits": [ 77 ],
+          "attributes": {
+          }
+        },
+        "$procmux$23_CMP": {
+          "hide_name": 1,
+          "bits": [ 78 ],
+          "attributes": {
+          }
+        },
+        "$procmux$24_CMP": {
+          "hide_name": 1,
+          "bits": [ 79 ],
+          "attributes": {
+          }
+        },
+        "$procmux$26_CMP": {
+          "hide_name": 1,
+          "bits": [ 81 ],
+          "attributes": {
+          }
+        },
+        "$procmux$27_CMP": {
+          "hide_name": 1,
+          "bits": [ 82 ],
+          "attributes": {
+          }
+        },
+        "$procmux$28_CMP": {
+          "hide_name": 1,
+          "bits": [ 83 ],
+          "attributes": {
+          }
+        },
+        "$procmux$29_CMP": {
+          "hide_name": 1,
+          "bits": [ 84 ],
+          "attributes": {
+          }
+        },
+        "$procmux$30_CMP": {
+          "hide_name": 1,
+          "bits": [ 85 ],
+          "attributes": {
+          }
+        },
+        "$procmux$31_CMP": {
+          "hide_name": 1,
+          "bits": [ 86 ],
+          "attributes": {
+          }
+        },
+        "$procmux$32_CMP": {
+          "hide_name": 1,
+          "bits": [ 87 ],
+          "attributes": {
+          }
+        },
+        "$procmux$33_CMP": {
+          "hide_name": 1,
+          "bits": [ 88 ],
+          "attributes": {
+          }
+        },
+        "$procmux$35_CMP": {
+          "hide_name": 1,
+          "bits": [ 104 ],
+          "attributes": {
+          }
+        },
+        "$procmux$36_CMP": {
+          "hide_name": 1,
+          "bits": [ 105 ],
+          "attributes": {
+          }
+        },
+        "$procmux$37_CMP": {
+          "hide_name": 1,
+          "bits": [ 106 ],
+          "attributes": {
+          }
+        },
+        "$procmux$38_CMP": {
+          "hide_name": 1,
+          "bits": [ 107 ],
+          "attributes": {
+          }
+        },
+        "$procmux$39_CMP": {
+          "hide_name": 1,
+          "bits": [ 108 ],
+          "attributes": {
+          }
+        },
+        "$procmux$40_CMP": {
+          "hide_name": 1,
+          "bits": [ 109 ],
+          "attributes": {
+          }
+        },
+        "$procmux$41_CMP": {
+          "hide_name": 1,
+          "bits": [ 110 ],
+          "attributes": {
+          }
+        },
+        "$procmux$42_CMP": {
+          "hide_name": 1,
+          "bits": [ 111 ],
+          "attributes": {
+          }
+        },
+        "$sub$/home/krishna/ALU_8bit/rtl/alu.v:32$6_Y": {
+          "hide_name": 1,
+          "bits": [ 97, 98, 99, 100, 101, 102, 103, 55, 80 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:32.31-32.52"
+          }
+        },
+        "$xor$/home/krishna/ALU_8bit/rtl/alu.v:47$12_Y": {
+          "hide_name": 1,
+          "bits": [ 89, 90, 91, 92, 93, 94, 95, 96 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:47.38-47.43"
+          }
+        },
+        "a": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:6.29-6.30"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:7.29-7.30"
+          }
+        },
+        "carry": {
+          "hide_name": 0,
+          "bits": [ 30 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:11.29-11.34"
+          }
+        },
+        "full_result": {
+          "hide_name": 0,
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28, 112 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:15.19-15.30",
+            "unused_bits": "8"
+          }
+        },
+        "negative": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:13.29-13.37"
+          }
+        },
+        "op": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:8.29-8.31"
+          }
+        },
+        "overflow": {
+          "hide_name": 0,
+          "bits": [ 31 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:12.29-12.37"
+          }
+        },
+        "result": {
+          "hide_name": 0,
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:9.29-9.35"
+          }
+        },
+        "zero": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "src": "/home/krishna/ALU_8bit/rtl/alu.v:10.29-10.33"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+
+15. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\alu.\result' from process `\alu.$proc$/home/krishna/ALU_8bit/rtl/alu.v:17$1'.
+No latch inferred for signal `\alu.\carry' from process `\alu.$proc$/home/krishna/ALU_8bit/rtl/alu.v:17$1'.
+No latch inferred for signal `\alu.\overflow' from process `\alu.$proc$/home/krishna/ALU_8bit/rtl/alu.v:17$1'.
+No latch inferred for signal `\alu.\full_result' from process `\alu.$proc$/home/krishna/ALU_8bit/rtl/alu.v:17$1'.

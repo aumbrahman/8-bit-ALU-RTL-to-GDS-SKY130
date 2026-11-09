@@ -1,0 +1,17 @@
+{
+    "DESIGN_NAME": "alu",
+    "VERILOG_FILES": [
+        "dir::../rtl/alu.v"
+    ],
+
+    "CLOCK_PORT": null,
+    "CLOCK_PERIOD": 10,
+
+    "PNR_SDC_FILE": "dir::alu.sdc",
+    "SIGNOFF_SDC_FILE": "dir::alu.sdc",
+
+    "RUN_CTS": false,
+
+    "FP_CORE_UTIL": 30,
+    "PL_TARGET_DENSITY_PCT": 40
+}
